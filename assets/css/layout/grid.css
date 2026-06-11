@@ -1,0 +1,72 @@
+/* assets/css/layout/grid.css */
+
+/**
+ * ========================================================
+ * Layout Grid System
+ * Complements Bootstrap with project-specific layout helpers.
+ * ========================================================
+ */
+
+.site-main {
+    min-height: 100vh;
+}
+
+.section-header {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-header.center {
+    text-align: center;
+}
+
+.section-grid {
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.section-grid.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-grid.three-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.section-grid.four-columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.split-layout.reverse .split-media {
+    order: 2;
+}
+
+.split-layout.reverse .split-content {
+    order: 1;
+}
+
+.page-wrapper {
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .section-grid.two-columns,
+    .section-grid.three-columns,
+    .section-grid.four-columns,
+    .split-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .split-layout.reverse .split-media,
+    .split-layout.reverse .split-content {
+        order: initial;
+    }
+}

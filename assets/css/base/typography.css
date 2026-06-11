@@ -1,0 +1,104 @@
+
+/* assets/css/base/typography.css */
+
+/**
+ * ========================================================
+ * Typography System
+ * ========================================================
+ */
+
+body {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--vortex-blue);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.text-display {
+    font-size: var(--font-display);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -1.8px;
+}
+
+.text-heading {
+    font-size: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.text-subheading {
+    font-size: var(--font-subheading);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.text-lead {
+    color: var(--text-secondary);
+    font-size: var(--font-lead);
+    line-height: 1.8;
+}
+
+.text-muted {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.text-inverse {
+    color: var(--text-inverse);
+}
+
+.text-inverse-muted {
+    color: var(--text-inverse-muted);
+}
+
+.eyebrow {
+    color: var(--vortex-gold);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    color: var(--vortex-blue);
+    font-size: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--vortex-gold);
+}
+
+.section-title.center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+

@@ -1,0 +1,551 @@
+/* assets/css/components/hero.css */
+
+/**
+ * ========================================================
+ * Hero Components
+ * VORTEX Precision Editorial Hero
+ * ========================================================
+ */
+
+.hero-precision {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 58%, rgba(10, 31, 68, 0.04) 0%, transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    color: var(--vortex-blue);
+}
+
+.hero-precision::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.34;
+    background-image:
+        linear-gradient(rgba(10, 31, 68, 0.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 31, 68, 0.032) 1px, transparent 1px);
+    background-size: 92px 92px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, transparent 80%);
+    pointer-events: none;
+}
+
+.hero-precision-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero-precision-bg::before {
+    content: "";
+    position: absolute;
+    left: -7rem;
+    top: 32%;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(10, 31, 68, 0.07);
+    border-radius: 50%;
+}
+
+.hero-precision-bg::after {
+    content: "";
+    position: absolute;
+    left: -3rem;
+    top: 38%;
+    width: 280px;
+    height: 280px;
+    border: 1px dashed rgba(10, 31, 68, 0.10);
+    border-radius: 50%;
+}
+
+.hero-precision-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1660px;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: clamp(1.5rem, 3.8vw, 4rem);
+    padding-right: clamp(1.5rem, 3.8vw, 4rem);
+    padding-top: clamp(5.1rem, 6.2vw, 6.8rem);
+    padding-bottom: clamp(2rem, 3vw, 3rem);
+}
+
+.hero-precision-topline {
+    width: 100%;
+    max-width: 1390px;
+    margin: clamp(1.8rem, 2.8vw, 3rem) auto 0;
+}
+
+.hero-precision-eyebrow {
+    color: var(--vortex-gold);
+    font-size: 0.76rem;
+    letter-spacing: 2.6px;
+    margin-bottom: 0;
+}
+
+.hero-precision-stage {
+    position: relative;
+    min-height: clamp(390px, 40vw, 540px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: clamp(0.4rem, 1vw, 1rem);
+}
+
+.hero-precision-word {
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    z-index: 1;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    color: var(--vortex-blue);
+    font-size: clamp(7rem, 17.2vw, 18.2rem);
+    font-weight: 800;
+    line-height: 0.78;
+    letter-spacing: -0.087em;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.hero-engine-wrap {
+    position: relative;
+    z-index: 3;
+    width: min(94vw, 1360px);
+    margin: clamp(4.5rem, 7vw, 6.4rem) auto 0;
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.hero-engine-image {
+    width: 100%;
+    max-height: clamp(410px, 46vw, 670px);
+    object-fit: contain;
+    display: block;
+    filter:
+        drop-shadow(0 34px 38px rgba(10, 31, 68, 0.13))
+        drop-shadow(0 8px 16px rgba(10, 31, 68, 0.07));
+}
+
+.hero-tech-detail {
+    position: absolute;
+    z-index: 4;
+    color: rgba(10, 31, 68, 0.55);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    line-height: 1.55;
+    text-transform: uppercase;
+}
+
+.hero-tech-detail span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--vortex-gold);
+    margin-bottom: 0.8rem;
+}
+
+.hero-tech-left {
+    left: clamp(1.5rem, 3vw, 3.5rem);
+    bottom: 17%;
+}
+
+.hero-tech-right {
+    right: clamp(1.5rem, 5vw, 5rem);
+    bottom: 17%;
+    text-align: left;
+}
+
+.hero-precision-copy {
+    position: relative;
+    z-index: 5;
+    max-width: 720px;
+    margin: clamp(-1.35rem, -1.7vw, -0.65rem) auto 0;
+    text-align: center;
+}
+
+.hero-gold-mark {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--vortex-gold);
+    margin: 0 auto 1rem;
+}
+
+.hero-precision-title {
+    color: var(--vortex-blue);
+    font-size: clamp(1.35rem, 1.55vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.65rem;
+}
+
+.hero-precision-text {
+    color: rgba(10, 31, 68, 0.62);
+    max-width: 610px;
+    margin: 0 auto 1.6rem;
+    font-size: clamp(0.94rem, 0.86vw, 1.02rem);
+    line-height: 1.65;
+}
+
+.hero-precision-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-precision-btn {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-width: 275px;
+    padding: 0.95rem 2.1rem;
+    background-color: var(--vortex-blue) !important;
+    color: var(--color-white) !important;
+    border-radius: 0;
+    border: 1px solid var(--vortex-blue) !important;
+    box-shadow: 0 18px 38px rgba(10, 31, 68, 0.15);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 1 !important;
+    overflow: hidden;
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        background-color var(--transition-base);
+}
+
+.hero-precision-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--vortex-gold);
+}
+
+.hero-precision-btn span {
+    color: var(--vortex-gold);
+    font-size: 1.4rem;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.hero-precision-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px rgba(10, 31, 68, 0.18);
+}
+
+/* Page Hero */
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(8rem, 12vw, 11rem) 0 clamp(4rem, 7vw, 6rem);
+    background-color: var(--color-surface);
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.045;
+    background-image:
+        linear-gradient(var(--vortex-blue) 1px, transparent 1px),
+        linear-gradient(90deg, var(--vortex-blue) 1px, transparent 1px);
+    background-size: 72px 72px;
+    pointer-events: none;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero .hero-title {
+    color: var(--vortex-blue);
+}
+
+/* Responsive */
+
+@media (max-width: 1399px) {
+    .hero-precision-word {
+        font-size: clamp(6.4rem, 17vw, 15rem);
+    }
+
+    .hero-engine-wrap {
+        width: min(95vw, 1220px);
+        transform: scale(1.06);
+    }
+
+    .hero-precision-stage {
+        min-height: clamp(370px, 42vw, 520px);
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero-precision-container {
+        padding-top: 5.6rem;
+    }
+
+    .hero-precision-topline {
+        margin-top: 2.4rem;
+    }
+
+    .hero-precision-word {
+        top: 34%;
+        font-size: clamp(5.6rem, 16vw, 11.5rem);
+    }
+
+    .hero-engine-wrap {
+        width: min(98vw, 1020px);
+        margin-top: 4.8rem;
+        transform: scale(1.03);
+    }
+
+    .hero-engine-image {
+        max-height: 510px;
+    }
+
+    .hero-tech-right {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-precision-container {
+        padding-top: 5.2rem;
+        justify-content: flex-start;
+    }
+
+    .hero-precision-topline {
+        margin-top: 2.2rem;
+        text-align: center;
+    }
+
+    .hero-precision-stage {
+        min-height: 390px;
+        margin-top: 0.6rem;
+    }
+
+    .hero-precision-word {
+        top: 35%;
+        font-size: clamp(4.4rem, 16vw, 8rem);
+    }
+
+    .hero-engine-wrap {
+        width: 108vw;
+        margin-top: 4.2rem;
+        margin-left: -4vw;
+        transform: scale(1);
+    }
+
+    .hero-engine-image {
+        max-height: 430px;
+    }
+
+    .hero-precision-copy {
+        margin-top: -0.35rem;
+    }
+
+    .hero-tech-left,
+    .hero-tech-right {
+        display: none;
+    }
+
+    .page-hero {
+        padding-top: 7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-precision {
+        min-height: auto;
+    }
+
+    .hero-precision-container {
+        min-height: auto;
+        padding-top: 4.8rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero-precision-topline {
+        margin-top: 2rem;
+    }
+
+    .hero-precision-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-precision-stage {
+        min-height: 320px;
+    }
+
+    .hero-precision-word {
+        top: 34%;
+        font-size: clamp(3.4rem, 17vw, 5.7rem);
+        letter-spacing: -0.075em;
+    }
+
+    .hero-engine-wrap {
+        width: 126vw;
+        margin-left: -13vw;
+        margin-top: 4rem;
+    }
+
+    .hero-engine-image {
+        max-height: 340px;
+    }
+
+    .hero-precision-copy {
+        margin-top: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .hero-precision-title {
+        font-size: clamp(1.25rem, 6vw, 1.65rem);
+    }
+
+    .hero-precision-text {
+        font-size: 0.95rem;
+    }
+
+    .hero-precision-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-precision-stage {
+        min-height: 290px;
+    }
+
+    .hero-engine-wrap {
+        width: 134vw;
+        margin-left: -17vw;
+        margin-top: 3.6rem;
+    }
+
+    .hero-precision-word {
+        top: 35%;
+        font-size: clamp(3rem, 18vw, 4.8rem);
+    }
+}
+/* ========================================================
+   Hero Precision - Mobile Final Calibration
+   ======================================================== */
+
+@media (max-width: 575px) {
+    .hero-precision-container {
+        padding-top: 5.1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2.4rem;
+    }
+
+    .hero-precision-topline {
+        margin-top: 1.8rem;
+        text-align: center;
+    }
+
+    .hero-precision-eyebrow {
+        position: relative;
+        z-index: 6;
+        max-width: 100%;
+        color: var(--vortex-gold);
+        font-size: 0.63rem;
+        letter-spacing: 1.8px;
+        white-space: nowrap;
+        transform: translateY(-0.4rem);
+    }
+
+    .hero-precision-stage {
+        min-height: 300px;
+        margin-top: 0;
+    }
+
+    .hero-precision-word {
+        top: 22%;
+        font-size: clamp(3.15rem, 18vw, 4.8rem);
+        line-height: 0.82;
+        letter-spacing: -0.075em;
+    }
+
+    .hero-engine-wrap {
+        width: 122vw;
+        margin-left: -11vw;
+        margin-top: 3.2rem;
+        transform: scale(1.08);
+    }
+
+    .hero-engine-image {
+        max-height: 300px;
+    }
+
+    .hero-precision-copy {
+        margin-top: -0.35rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .hero-gold-mark {
+        margin-bottom: 0.85rem;
+    }
+
+    .hero-precision-title {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(1.35rem, 6.2vw, 1.75rem);
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-precision-text {
+        max-width: 340px;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 1.7rem;
+    }
+
+    .hero-precision-btn {
+        width: calc(100% - 2rem);
+        min-width: 0;
+        max-width: 360px;
+        padding: 1rem 1.25rem;
+        font-size: 0.75rem;
+        letter-spacing: 1.8px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-precision-word {
+        font-size: clamp(2.85rem, 17vw, 4.2rem);
+    }
+
+    .hero-engine-wrap {
+        width: 128vw;
+        margin-left: -14vw;
+    }
+
+    .hero-precision-title {
+        font-size: 1.32rem;
+    }
+
+    .hero-precision-text {
+        font-size: 0.9rem;
+    }
+}
